@@ -1,3 +1,4 @@
+//Stirling's approximation for factorials. 
 #include <iostream> 
 #include <cmath>
 using namespace std;
