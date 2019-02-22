@@ -9,19 +9,21 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
+int main(){
+   int num,i,count,n;
+   cout << "Enter max range: ";
+   cin >> n;
+   for(num = 1;num<=n;num++){
+       count = 0;
+       for(i=2;i<=num/2;i++){
+          if(num%i==0){
+              count++;
+              break;
+          }
+        }
 
-int main() {
-	int num;
-	cout << "Enter an integer: " << endl;
-	cin >> num;
-	for (int i=1;i<num;i++)
-		for (int j=2; j*j<=i; j++){
-			if (i % j == 0)
-				break;
-			else if (j+1 > sqrt(i)) {
-				cout << i << endl;
-
-		    }
-
-	}
+   if(count==0 && num!= 1)
+      cout << num << endl;
+   }
+    return 0;
 }
